@@ -1,0 +1,145 @@
+<div *ngIf="!isClientLoggedIn && !isCompanyLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex" style="background: linear-gradient(90deg, #0066ff, #33ccff);">
+    <div>
+      <a class="logo" href="#">
+        <img src="logo.png" alt="my logo" class="d-inline-block align-top">
+      </a>
+    </div>
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/home" routerLinkActive="active">Home</a>
+      <a nz-button nzType="link" routerLink="/register" routerLinkActive="active">Register</a>
+      <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">Login</a>
+      <a nz-button nzType="link" routerLink="/about" routerLinkActive="active">About us</a>
+      <a nz-button nzType="link" routerLink="/contact" routerLinkActive="active">Contact</a>
+    </div>
+  </nz-header>
+  <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0" class="mobile-sidenav">
+    <ul class="nav-links" nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/home" routerLinkActive="active">Home</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/register" routerLinkActive="active">Register</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">Login</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/about" routerLinkActive="active">About us</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/contact" routerLinkActive="active">Contact</a>
+      </li>
+    </ul>
+  </nz-sider>
+</div>
+
+<div *ngIf="isClientLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex" style="background: linear-gradient(90deg, #0066ff, #33ccff);">
+    <div>
+      <a class="logo" href="#">
+        <img src="logo.png" alt="my logo" class="d-inline-block align-top">
+      </a>
+    </div>
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/client/dashboard" routerLinkActive="active">Dashboard</a>
+      <a nz-button nzType="link" routerLink="/client/bookings" routerLinkActive="active">Bookings</a>
+      <a nz-button nzType="link" routerLink="/client/service-request" routerLinkActive="active">Service Request</a>
+      <a nz-button nzType="link" routerLink="/client/inquiry" routerLinkActive="active">Inquiry</a>
+      <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+    </div>
+  </nz-header>
+  <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0" class="mobile-sidenav">
+    <ul class="nav-links" nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/client/dashboard" routerLinkActive="active">Dashboard</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/client/bookings" routerLinkActive="active">Bookings</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/client/service-request" routerLinkActive="active">Service Request</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/client/inquiry" routerLinkActive="active">Inquiry</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+      </li>
+    </ul>
+  </nz-sider>
+</div>
+
+<div *ngIf="isCompanyLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex" style="background: linear-gradient(90deg, #0066ff, #33ccff);">
+    <div>
+      <a class="logo" href="#">
+        <img src="logo.png" alt="my logo" class="d-inline-block align-top">
+      </a>
+    </div>
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/company/dashboard" routerLinkActive="active">Dashboard</a>
+      <a nz-button nzType="link" routerLink="/company/services" routerLinkActive="active">Service Requests</a>
+      <a nz-button nzType="link" routerLink="/company/ad" routerLinkActive="active">Post Ad</a>
+      <a nz-button nzType="link" routerLink="/company/ads" routerLinkActive="active">Ads</a>
+      <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+
+    </div>
+  </nz-header>
+
+  <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0" class="mobile-sidenav">
+    <ul class="nav-links" nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/company/dashboard" routerLinkActive="active">Dashboard</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/company/services" routerLinkActive="active">Service Requests</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/company/ad" routerLinkActive="active">Post Ad</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" routerLink="/company/ads" routerLinkActive="active">Ads</a>
+      </li>
+      <li nz-menu-item>
+        <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Logout</a>
+      </li>
+    </ul>
+  </nz-sider>
+</div>
+<router-outlet></router-outlet>
+
+<!-- footer -->
+<nz-footer class="footer" style="background-color: #2b92ca; color: white; padding: 20px 50px; margin-top: 20px;">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>My Sync Serve is dedicated to providing top-quality services. From home cleaning to professional repairs,
+        we cover all your needs with excellence.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a nz-button nzType="link" routerLink="/home" style="color: white;">Home</a></li>
+        <li><a nz-button nzType="link" routerLink="/register" style="color: white;">Register</a></li>
+        <li><a nz-button nzType="link" routerLink="/login" style="color: white;">Login</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>Email: support&#64;mysyncserve.com</p>
+      <p>Phone: +91 12345 67890</p>
+    </div>
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <a href="https://www.facebook.com" style="color: white; margin-right: 10px;"><i nz-icon nzType="facebook"
+          nzTheme="outline"></i></a>
+      <a href="https://www.twitter.com" style="color: white; margin-right: 10px;"><i nz-icon nzType="twitter"
+          nzTheme="outline"></i></a>
+      <a href="https://www.linkedin.com" style="color: white;"><i nz-icon nzType="linkedin" nzTheme="outline"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom" style="text-align: center; padding-top: 20px;">
+    <p>© 2024/25 My Sync Serve. All rights reserved.</p>
+  </div>
+</nz-footer>

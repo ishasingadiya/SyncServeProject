@@ -1,0 +1,20 @@
+<div class="chat-container">
+  <div class="chat-header">
+    <h2>AI Chatbot</h2>
+  </div>
+  <div class="chat-messages" #chatMessages>
+    <div *ngFor="let message of messages" [ngClass]="{'user-message': message.isUser, 'bot-message': !message.isUser}">
+      <span>{{ message.text }}</span>
+      <button nz-button nzType="link" (click)="copyMessage(message.text)" class="copy-button">Copy</button>
+    </div>
+  </div>
+  <div class="chat-input">
+    <textarea nz-input [(ngModel)]="userInput" placeholder="Ask me anything..." [disabled]="loading"></textarea>
+    <button nz-button nzType="primary" (click)="sendMessage()" [disabled]="loading">Send</button>
+  </div>
+  <div class="typing-indicator" *ngIf="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>

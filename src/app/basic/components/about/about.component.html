@@ -1,0 +1,43 @@
+<div class="about-page">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to SyncServe</h1>
+      <p>Your trusted platform for hassle-free home services.</p>
+    </div>
+  </section>
+  <section class="mission-vision">
+    <div class="grid">
+      <div class="card">
+        <h2>Our Mission</h2>
+        <p>Deliver seamless, technology-driven home services that enhance your everyday life.</p>
+      </div>
+      <div class="card">
+        <h2>Our Vision</h2>
+        <p>To be the most trusted home service provider, offering innovation and customer-focused solutions.</p>
+      </div>
+    </div>
+  </section>
+  <section class="values">
+    <h2>Our Core Values</h2>
+    <div class="values-grid">
+      <div class="value-card">🔹 Reliability</div>
+      <div class="value-card">🔹 Innovation</div>
+      <div class="value-card">🔹 Customer First</div>
+      <div class="value-card">🔹 Transparency</div>
+    </div>
+  </section>
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <nz-collapse>
+      <nz-collapse-panel *ngFor="let item of faqs" [nzHeader]="item.question" [nzActive]="item.open">
+        <p>{{ item.answer }}</p>
+      </nz-collapse-panel>
+    </nz-collapse>
+  </section>
+  <section class="cta">
+    <h2>Join the SyncServe Experience</h2>
+    <p>Discover the future of home services today.</p>
+    <button nz-button nzType="primary" routerLink="/register">Get Started<i nz-icon nzType="double-right" nzTheme="outline"></i></button>
+  </section>
+</div>

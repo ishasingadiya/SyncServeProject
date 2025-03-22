@@ -1,0 +1,35 @@
+<div class="bg">
+    <div class="parent">
+      <div class="child">
+        <div nz-col>
+          <h1 class="form-title">Inquiry Form</h1>
+        </div>
+  
+        <form nz-form [formGroup]="inquiryForm" (ngSubmit)="onSubmit()">
+          <nz-form-item>
+            <nz-form-control nzHasFeedback nzErrorTip="The input is not valid!">
+              <input nz-input placeholder="Name" formControlName="name" />
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control nzHasFeedback nzErrorTip="The input is not valid E-mail!">
+              <input nz-input placeholder="E-mail" formControlName="email" />
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control nzHasFeedback nzErrorTip="The input is not valid!">
+              <input nz-input placeholder="Inquiry Type" formControlName="inquiryType" />
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control nzHasFeedback nzErrorTip="The input is not valid!">
+              <textarea nz-input placeholder="Description" formControlName="description"></textarea>
+            </nz-form-control>
+          </nz-form-item>
+  
+          <button nz-button class="login-form-button" [nzType]="'primary'">Submit Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

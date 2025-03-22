@@ -1,0 +1,36 @@
+<nz-table #basicTable [nzData]="serviceRequests" [nzPageSize]="10" [nzShowPagination]="true" style="padding: 20px;">
+    <thead>
+      <tr>
+        <th class="heading">Client Name</th>
+        <th class="heading">Service Request</th>
+        <th class="heading">Description</th>
+        <th class="heading">Email</th>
+        <th class="heading">Mobile</th>
+        <th class="heading">Response</th>
+        <th class="heading">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let request of basicTable.data">
+        <td>{{ request.name }}</td>
+        <td>{{ request.requestInfo }}</td>
+        <td>{{ request.description }}</td>
+        <td>{{ request.email }}</td>
+        <td>{{ request.mobile }}</td>
+        <td>{{ request.response || 'No response yet' }}</td>
+        <td>
+          <span *ngIf="!request.response">
+            <button nzSize="small" nz-button nzType="primary" 
+              (click)="respondToServiceRequest(request.id, 'Approved')">
+              Approve
+            </button>
+            <button nzSize="small" nz-button nzType="primary" nzDanger
+              (click)="respondToServiceRequest(request.id, 'Rejected')">
+              Reject
+            </button>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+  

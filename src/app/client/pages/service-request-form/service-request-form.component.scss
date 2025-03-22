@@ -1,0 +1,104 @@
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  .form-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #1890ff, #40a9ff);
+      border-radius: 2px;
+    }
+  }
+  form {
+    nz-form-item {
+      margin-bottom: 25px;
+    }
+    nz-form-label {
+      font-weight: 500;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+    input[nz-input],
+    nz-date-picker {
+      height: 45px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      border: 2px solid #e2e8f0;
+      transition: all 0.3s ease;
+      font-size: 15px;
+      &:focus {
+        border-color: #1890ff;
+        box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1);
+      }
+      &::placeholder {
+        color: #a0aec0;
+      }
+    }
+    nz-date-picker {
+      width: 100%;
+    }
+    .buttons-row {
+      margin-top: 40px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      button {
+        min-width: 150px;
+        height: 45px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        &[nzType="primary"] {
+          background: linear-gradient(135deg, #1890ff, #004080);
+          border: none;
+          box-shadow: 0 4px 15px rgba(24, 144, 255, 0.2);
+          &:hover:not([disabled]) {
+            background: linear-gradient(135deg, #004080, #1890ff);
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+          }
+        }
+        &[nzType="default"] {
+          border: 2px solid #e2e8f0;
+          color: #64748b;
+          &:hover {
+            border-color: #1890ff;
+            color: #1890ff;
+            background: #f8fafc;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 25px;
+    .form-title {
+      font-size: 24px;
+    }
+    .buttons-row {
+      flex-direction: column;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

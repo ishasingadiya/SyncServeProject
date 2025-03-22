@@ -1,0 +1,146 @@
+.about-page {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #333;
+
+  // Hero Section
+  .hero {
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    color: #1e40af;
+    padding: 100px 20px;
+    text-align: center;
+
+    .hero-content {
+      max-width: 800px;
+      margin: auto;
+
+      h1 {
+        font-size: 50px;
+        font-weight: bold;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      p {
+        font-size: 22px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  // Mission & Vision Section
+  .mission-vision {
+    padding: 60px 20px;
+    background: #F4F7FA;
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      transition: transform 0.3s ease-in-out;
+      border-left: 5px solid #007BFF;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #1e40af;
+      }
+    }
+  }
+
+  // Core Values
+  .values {
+    background: white;
+    padding: 50px 20px;
+
+    h2{
+      color: #1e40af;
+    }
+
+    .values-grid {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .value-card {
+      background: linear-gradient(135deg, #007BFF, #00A8E8);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      min-width: 200px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: linear-gradient(135deg, #00A8E8, #007BFF);
+        transform: translateY(-2px);
+        box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  // FAQ Section
+  .faq {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+
+    h2 {
+      margin-bottom: 20px;
+      color: #1e40af;
+    }
+
+    nz-collapse-panel {
+      background: white;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  // CTA Section
+  .cta {
+    background: #ffffff;
+    color: #1e40af;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+
+    h2 {
+      font-size: 32px;
+    }
+    button {
+      display: block; 
+      margin: 0 auto; 
+      text-align: center;
+      // padding: 12px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      background: linear-gradient(135deg, #007BFF, #00A8E8);
+      width: max-content; 
+
+      &:hover {
+        background: linear-gradient(135deg, #00A8E8, #007BFF);
+        transform: translateY(-2px);
+        box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}

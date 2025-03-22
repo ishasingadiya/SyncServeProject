@@ -1,0 +1,75 @@
+.ng {
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section {
+    background: linear-gradient(135deg, #ffffff, #f0f4f8);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 50px 40px;
+    max-width: 420px;
+    width: 90%;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.header {
+    margin-bottom: 25px;
+
+    h1 {
+        font-size: 26px;
+        font-weight: bold;
+        color: #001529;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #555;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    button {
+        font-size: 18px;
+        font-weight: 600;
+        padding: 14px 0;
+        border-radius: 8px;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        color: white;
+        background: linear-gradient(135deg, #1890ff, #004080);
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+
+        &:hover {
+            background: linear-gradient(135deg, #004080, #1890ff);
+            box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+    }
+}

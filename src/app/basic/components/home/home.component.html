@@ -1,0 +1,89 @@
+<div class="home-container">
+  <section class="hero">
+    <div class="hero-content">
+      <div class="brand">
+        <h1>SyncServe</h1>
+        <h2>Professional Home Services at Your Fingertips</h2>
+      </div>
+      <div class="search-container">
+        <div class="search-box">
+          <input type="text" [(ngModel)]="searchText" (input)="onSearch()" placeholder="What service do you need?"
+            autocomplete="off">
+          <button class="search-btn" (click)="onSearch()">Find Service</button>
+        </div>
+
+        <div class="suggestions" *ngIf="searchText && getSuggestions().length > 0">
+          <div class="suggestion-item" *ngFor="let suggestion of getSuggestions()"
+            (click)="searchText = suggestion; onSearch()">
+            {{ suggestion }}
+          </div>
+        </div>
+      </div>
+
+      <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+          <div class="service-card" *ngFor="let service of filteredServices">
+            <div class="service-icon" [style.backgroundColor]="service.color + '15'">
+              <i nz-icon [nzType]="service.icon" [style.color]="service.color"></i>
+            </div>
+            <h3>{{service.title}}</h3>
+            <p>{{service.description}}</p>
+            <div class="service-footer">
+              <button class="book-now" routerLink="/register">Book Now</button>
+              <span class="price-tag">Starting from ₹499</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section class="process">
+        <h2 class="how">How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Select Service</h3>
+            <p>Choose from our wide range of services</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Schedule Time</h3>
+            <p>Pick your preferred date and time</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Expert Service</h3>
+            <p>Our professional will arrive at your doorstep</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust Indicators -->
+      <section class="trust-section">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <i nz-icon nzType="safety-certificate"></i>
+            <h3>Verified Experts</h3>
+            <p>Background checked professionals</p>
+          </div>
+          <div class="trust-item">
+            <i nz-icon nzType="clock-circle"></i>
+            <h3>On-Time Service</h3>
+            <p>Punctual and reliable</p>
+          </div>
+          <div class="trust-item">
+            <i nz-icon nzType="dollar"></i>
+            <h3>Best Pricing</h3>
+            <p>Competitive and transparent</p>
+          </div>
+        </div>
+      </section>
+      <button class="chatbot-icon" (click)="toggleChatbot()">
+        <i nz-icon [nzType]="showChatbot ? 'close' : 'message'"></i>
+    </button>
+    
+    <div class="chatbot-container" *ngIf="showChatbot">
+      <app-chatbot></app-chatbot>
+    </div>
+    </div>
