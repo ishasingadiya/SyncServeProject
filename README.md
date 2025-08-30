@@ -1,31 +1,40 @@
-<<<<<<< HEAD
-# SyncServeWeb-FrontEnd
-=======
-# ServiceBookSystemWeb
+SyncServe – Service Booking Web Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+SyncServe is a full-stack web application that connects clients with service providers, similar to platforms like Urban Company. The platform allows users to book services, give reviews, and manage requests, while companies can create and manage service ads.
 
-## Development server
+🚀 Features
+Client registration and login
+Company registration and ad creation
+Service booking with request management
+Review and feedback system
+Dashboard for both clients and companies
+Secure authentication & smooth UI
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+🛠️ Tech Stack
+Frontend: Angular
+Backend: Spring Boot (REST APIs)
+Database: MySQL
+Other: Hibernate, JPA
 
-## Code scaffolding
+📂 Project Structure
+Frontend (Angular): Responsive UI for clients & companies
+Backend (Spring Boot): RESTful services for bookings, ads, and user management
+Database (MySQL): Stores users, ads, bookings, and reviews
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+▶️ How to Run
+Clone the repository:
+git clone https://github.com/ishasingadiya/sync-serve.git
 
-## Build
+Run backend (Spring Boot)
+cd backend  
+mvn spring-boot:run
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run frontend (Angular)
+cd frontend  
+ng serve
 
-## Running unit tests
+Open in browser:
+http://localhost:4200
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
->>>>>>> 9dec2ba (any message)
+🔗 Links
+GitHub Repo: https://github.com/ishasingadiya/SyncServeProject.git
