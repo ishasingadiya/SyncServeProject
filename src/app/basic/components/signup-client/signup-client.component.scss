@@ -1,57 +1,98 @@
-[nz-form] {
-    max-width: 600px;
+/* Background */
+.bg {
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.phone-select {
-    width: 70px;
-}
-
-.child {
-    padding: 50px;
-    position: absolute;
-    width: 380px;
-    background-color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 1px 1px 15px -7px rgba(0,0,0,0.1);
-    border-radius: 5px;
-    margin-bottom: 22px;
-}
-
-nz-form-control {
-    min-width: 280px;
-}
-
+/* Centering the Form */
 .parent {
     width: 100%;
-    height: 91vh;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.login-form-margin {
-    margin-bottom: 16px;
+/* Form Container */
+.child {
+    background: linear-gradient(135deg, #ffffff, #f0f4f8);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 40px;
+    max-width: 420px;
+    width: 90%;
+    transition: transform 0.3s ease-in-out;
 }
 
-.login-form-forgot {
-    float: right;
+.child:hover {
+    transform: scale(1.02);
 }
 
+/* Header */
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #001529;
+    margin-bottom: 20px;
+}
+
+/* Form */
+nz-form-item {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+nz-form-control input {
+    height: 50px;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+nz-form-control input:focus {
+    border-color: #1890ff;
+    box-shadow: 0px 0px 8px rgba(24, 144, 255, 0.3);
+}
+
+/* Register Button */
 .login-form-button {
     width: 100%;
-}
-
-button{
-    background-color: #001529;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
     border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #1890ff, #004080);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
 }
 
-.imgDiv {
-    width: 100%;
-    vertical-align: middle;
-    margin-bottom: 40px;
+.login-form-button:hover {
+    background: linear-gradient(135deg, #004080, #1890ff);
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
-.bg {
-    background-color: #f5f7f9;
+/* Login Link */
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #1890ff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
 }

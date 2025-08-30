@@ -65,7 +65,7 @@ export class AdDetailComponent implements OnInit {
         'Request posted successfully',
         {nzDuration: 5000}
       );
-      this.router.navigateByUrl('/client/bookings');
+      this.router.navigateByUrl('/client/service-request');
     })
   }
 

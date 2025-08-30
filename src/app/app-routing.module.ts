@@ -8,8 +8,6 @@ import { HomeComponent } from './basic/components/home/home.component';
 import { ContactComponent } from './basic/components/contact/contact.component';
 import { EmailService } from './basic/services/email/email.service';
 import { AboutComponent } from './basic/components/about/about.component';
-import { ForgetPasswordComponent } from './basic/components/forget-password/forget-password.component';
-
 const routes: Routes = [
   { path: 'register_client', component: SignupClientComponent },
   { path: 'register_company', component: SignupCompanyComponent },

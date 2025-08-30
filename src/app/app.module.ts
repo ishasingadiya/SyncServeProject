@@ -25,12 +25,11 @@ import { ContactComponent } from './basic/components/contact/contact.component';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { ChatbotComponent } from './basic/components/chatbot/chatbot.component';
 import { AboutComponent } from './basic/components/about/about.component';
-import { ForgetPasswordComponent } from './basic/components/forget-password/forget-password.component';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
-registerLocaleData(en);
+ registerLocaleData(en);
 CUSTOM_ELEMENTS_SCHEMA
 @NgModule({
   declarations: [
@@ -44,7 +43,6 @@ CUSTOM_ELEMENTS_SCHEMA
     ContactComponent,
     ChatbotComponent,
     AboutComponent,
-    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,

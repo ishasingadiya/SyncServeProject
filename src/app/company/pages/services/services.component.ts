@@ -30,7 +30,7 @@ export class ServicesComponent {
     this.companyService.respondToServiceRequest(requestId, response).subscribe({
       next: () => {
         this.notification.success('Success', `Response updated: ${response}`);
-        this.loadServiceRequests(); // ✅ Corrected method call
+        this.loadServiceRequests(); 
       },
       error: (error) => {
         console.error('Error updating response:', error);

@@ -18,7 +18,7 @@ export class HomeComponent {
   allServices: Service[] = [
     {
       title: 'TV Repair & Installation',
-      icon: 'tv',
+      icon: 'tool',
       description: 'Expert TV repair and professional mounting services',
       keywords: ['tv', 'television', 'mounting', 'installation', 'repair', 'smart tv'],
       color: '#1890ff'

@@ -55,8 +55,9 @@ nz-table {
   button[nz-button] {
     background: linear-gradient(45deg, #ff4d4f, #ff6b6b);
     border: none;
+    height: 30px;
+    width: 60px;
     border-radius: 8px;
-    padding: 8px 20px;
     font-weight: 500;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(255, 77, 79, 0.2);
@@ -83,7 +84,6 @@ nz-table {
       }
     }
     button[nz-button] {
-      padding: 6px 16px;
       font-size: 13px;
     }
   }
